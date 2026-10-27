@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bad Açaí — Aventura Gelada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand-mark">🍇</div>
+      <div>
+        <p class="eyebrow">ARCADE PIXEL</p>
+        <h1>BAD AÇAÍ</h1>
+      </div>
+      <div class="top-status"><span class="status-dot"></span> JOGÁVEL</div>
+    </header>
+
+    <section class="game-frame" aria-label="Jogo Bad Açaí">
+      <canvas id="game" width="960" height="600" aria-label="Área do jogo"></canvas>
+      <div id="startScreen" class="overlay">
+        <div class="warning-sign">
+          <div class="acai-face"><span class="eyes">▰ ▰</span><span class="mouth">⌢</span></div>
+        </div>
+        <p class="mini-title">UMA AVENTURA CONGELANTE</p>
+        <h2>BAD <span>AÇAÍ</span></h2>
+        <p class="intro">Colete as frutinhas, desvie dos monstrinhos<br>e encontre a saída do laboratório!</p>
+        <button id="startBtn" class="start-button">▶ COMEÇAR JOGO</button>
+        <p class="controls-hint">USE <b>← ↑ → ↓</b> OU <b>W A S D</b> PARA ANDAR</p>
+      </div>
+      <div id="endScreen" class="overlay hidden">
+        <div class="end-emoji" id="endEmoji">🏆</div>
+        <p class="mini-title" id="endKicker">FASE CONCLUÍDA</p>
+        <h2 id="endTitle">MANDOU BEM!</h2>
+        <p class="intro" id="endText">Você coletou todas as frutinhas!</p>
+        <button id="restartBtn" class="start-button">↻ JOGAR DE NOVO</button>
+      </div>
+    </section>
+
+    <footer class="game-footer">
+      <div class="stat"><span>🍇</span> FRUTINHAS <strong id="berryCount">0/8</strong></div>
+      <div class="stat"><span>❤️</span> VIDAS <strong id="lives">3</strong></div>
+      <div class="footer-tip">DICA: FUJA DOS INIMIGOS ROXOS!</div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
